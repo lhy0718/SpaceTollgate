@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
-    public static GameManager instance;
+public class GameManager : SingletonBehaviour<GameManager> {
+    //public static GameManager instance;
 
     public Text text;
     public Text scoreText;
     public Button retryButton;
     public PlayerController player;
     public Slider hpBar;
+    public bool isPause = false;
     private int score;
     public int Score {
         get {
@@ -22,9 +23,15 @@ public class GameManager : MonoBehaviour {
             scoreText.text = "Score : " + score;
         }
     }
-
-    void Awake() {
-        instance = this;
+    void Awake()
+    {
+        if (instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        else
+            SetStatic();
         //text.SetActive(true);
     }
 
@@ -33,6 +40,17 @@ public class GameManager : MonoBehaviour {
         retryButton.onClick.AddListener(delegate {
             SceneManager.LoadScene("Main");
         });
+    }
+    void Update()
+    {
+        if (isPause)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     private void GameInit() {
@@ -46,5 +64,15 @@ public class GameManager : MonoBehaviour {
         text.gameObject.SetActive(true);
         text.text = "GAME OVER";
         retryButton.gameObject.SetActive(true);
+    }
+
+    public void GamePause()
+    {
+        isPause = true;
+    }
+
+    public void GameResume()
+    {
+        isPause = false;
     }
 }
