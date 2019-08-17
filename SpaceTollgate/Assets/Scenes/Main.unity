@@ -20592,6 +20592,75 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1001 &1180549666754367703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 750163137025443056, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_Name
+      value: Basic_Battleship5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750163137025443058, guid: c8161fd94aacf934ab0cb3056843c063,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8161fd94aacf934ab0cb3056843c063, type: 3}
 --- !u!1001 &1876658321423551414
 PrefabInstance:
   m_ObjectHideFlags: 0
