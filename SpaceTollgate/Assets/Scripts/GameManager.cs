@@ -66,8 +66,11 @@ public class GameManager : SingletonBehaviour<GameManager> {
     private void GameInit() {
         text.gameObject.SetActive(false);
         //for Test
-        Score = 1000;
+        Score = 2000;
         player.Hp = player.maxHp = 100;
+        player.ShieldLevel = 0;
+        player.RangeLevel = 0;
+        player.SpeedLevel = 0;
         retryButton.gameObject.SetActive(false);
     }
 
@@ -87,10 +90,20 @@ public class GameManager : SingletonBehaviour<GameManager> {
         isPause = false;
     }
 
-    public void UpgradePlayerLevel()
+    public void UpgradePlayerLevel(int statusNumber)
     {
-        Debug.Log("Upgrade Player Level");
-        //player level에 프로퍼티를 달아서 능력치를 조정하자. 
+        if (statusNumber == 0)
+        {
+            player.ShieldLevel++;
+        }
+        else if (statusNumber == 1)
+        {
+            player.RangeLevel++;
+        }
+        else if (statusNumber == 2)
+        {
+            player.SpeedLevel++;
+        }
     }
     
 }

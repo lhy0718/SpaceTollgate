@@ -11,6 +11,50 @@ public class PlayerController : MonoBehaviour
     public Slider hpBar;
     public int Size { get; set; }
     public int maxHp;
+    public float range;
+
+    [SerializeField]
+    private int shieldLevel;
+    [SerializeField]
+    private int rangeLevel;
+    [SerializeField]
+    private int speedLevel;
+    public int ShieldLevel {
+        get {
+            return shieldLevel;
+        }
+        set {
+            shieldLevel = value;
+            maxHp += 1;
+        }
+    }
+
+    public int RangeLevel
+    {
+        get
+        {
+            return rangeLevel;
+        }
+        set
+        {
+            rangeLevel = value;
+            range += 2.5f;
+        }
+    }
+
+    public int SpeedLevel
+    {
+        get
+        {
+            return speedLevel;
+        }
+        set
+        {
+            speedLevel = value;
+            //test: temp value
+            speed += 2;
+        }
+    }
 
     private WingManager rWingM, lWingM;
     private int hp;

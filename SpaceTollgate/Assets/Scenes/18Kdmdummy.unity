@@ -702,6 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b513a4dfc7144405cb933c9bf3ad52da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
   text: {fileID: 551181502}
   scoreText: {fileID: 1263797880}
   retryButton: {fileID: 19144745}
@@ -709,7 +710,7 @@ MonoBehaviour:
   hpBar: {fileID: 1279043788}
   isPause: 0
   ShieldCost: 0a000000140000003c000000960000002c01000058020000
-  RangeCost: 1400000028000000500000001e00000058020000
+  RangeCost: 1400000028000000500000002c01000058020000
   SpeedCost: 0a000000140000002800000050000000960000002c01000058020000
 --- !u!4 &430683979
 Transform:
@@ -1691,6 +1692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f5eeff691824414a804bce14b64fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frontBurst: {fileID: 0}
+  backBurst: {fileID: 0}
 --- !u!212 &680556942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3291,6 +3294,7 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   hpBar: {fileID: 1279043788}
   maxHp: 100
+  range: 0
 --- !u!50 &1649452358
 Rigidbody2D:
   serializedVersion: 4
@@ -4277,6 +4281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f5eeff691824414a804bce14b64fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frontBurst: {fileID: 0}
+  backBurst: {fileID: 0}
 --- !u!212 &2057318836
 SpriteRenderer:
   m_ObjectHideFlags: 0

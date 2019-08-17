@@ -71,47 +71,76 @@ public class UIManager : SingletonBehaviour<UIManager>
 
     public void ShieldUpgrade()
     {
-        Debug.Log("Upgrade Shield");
-        gm.Score -= gm.ShieldCost[0];
+        gm.Score -= gm.ShieldCost[gm.player.ShieldLevel];
+        gm.UpgradePlayerLevel(0);
         UpdateInfo();
     }
 
     public void RangeUpgrade()
     {
-        Debug.Log("Upgrade Range");
-        gm.Score -= gm.RangeCost[0];
+        gm.Score -= gm.RangeCost[gm.player.RangeLevel];
+        gm.UpgradePlayerLevel(1);
         UpdateInfo();
     }
 
     public void SpeedUpgrade()
     {
-        Debug.Log("Upgrade Speed");
-        gm.Score -= gm.SpeedCost[0];
+        gm.Score -= gm.SpeedCost[gm.player.SpeedLevel];
+        gm.UpgradePlayerLevel(2);
         UpdateInfo();
     }
 
     private void UpdateInfo()
     {
-        ShieldCostText.text=": -"+gm.ShieldCost[0];
-        ShieldValueText.text=": +1";
-        RangeCostText.text = ": -" + gm.RangeCost[0];
-        RangeValueText.text = ": +2";
-        SpeedCostText.text = ": -" + gm.SpeedCost[0];
-        //temp value
-        SpeedValueText.text = ": +1.5";
-
-        if(gm.ShieldCost[0]>gm.Score/*||player level > 6*/)
+        if (gm.player.ShieldLevel < 6)
         {
+            ShieldCostText.text = ": -" + gm.ShieldCost[gm.player.ShieldLevel];
+            ShieldValueText.text = ": +1";
+            if (gm.ShieldCost[gm.player.ShieldLevel + 1] > gm.Score)
+            {
+                ShieldUpgradeButton.interactable = false;
+            }
+        }
+        else
+        {
+            ShieldCostText.text = ": ---";
+            ShieldValueText.text = ": ---";
             ShieldUpgradeButton.interactable=false;
         }
-        if (gm.RangeCost[0] > gm.Score/*||player level > 5*/)
+        if (gm.player.RangeLevel < 5)
         {
+            RangeCostText.text = ": -" + gm.RangeCost[gm.player.RangeLevel];
+            RangeValueText.text = ": +1";
+            if (gm.RangeCost[gm.player.RangeLevel + 1] > gm.Score)
+            {
+                RangeUpgradeButton.interactable = false;
+            }
+        }
+        else
+        {
+            RangeCostText.text = ": ---";
+            RangeValueText.text = ": ---";
             RangeUpgradeButton.interactable = false;
         }
-        if (gm.SpeedCost[0] > gm.Score/*||player level > 7*/)
+        if (gm.player.SpeedLevel < 7)
         {
+            SpeedCostText.text = ": -" + gm.SpeedCost[gm.player.SpeedLevel];
+            SpeedValueText.text = ": +1";
+            if (gm.SpeedCost[gm.player.SpeedLevel + 1] > gm.Score)
+            {
+                SpeedUpgradeButton.interactable = false;
+            }
+        }
+        else
+        {
+            SpeedCostText.text = ": ---";
+            SpeedValueText.text = ": ---";
             SpeedUpgradeButton.interactable = false;
         }
+
+        
+        
+        
     }
     #endregion
 
