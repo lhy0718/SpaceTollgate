@@ -18,6 +18,8 @@ public class UIManager : SingletonBehaviour<UIManager>
     public Text SpeedValueText;
     public Button SpeedUpgradeButton;
 
+    public Text playTimer;
+
     private GameManager gm;
     // Start is called before the first frame update
     void Awake()
@@ -141,6 +143,15 @@ public class UIManager : SingletonBehaviour<UIManager>
         
         
         
+    }
+    #endregion
+
+    #region Play Time
+    public void updatePlayTime(float playtime)
+    {
+        string minutes = ((int)playtime / 60).ToString("00");
+        string seconds = (playtime % 60).ToString("00");
+        playTimer.text = minutes + ":" + seconds;
     }
     #endregion
 

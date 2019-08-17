@@ -16,12 +16,15 @@ public class GameManager : SingletonBehaviour<GameManager> {
     public Slider hpBar;
     public bool isPause = false;
 
+    public float playTime;
+
     public int[] ShieldCost= {20,30};
     //public int[] ShieldValue= {20,30};
     public int[] RangeCost= {20,30};
     //public int[] RangeValue= {20,30};
     public int[] SpeedCost= {20,30};
     //public int[] SpeedValue= {20,30};
+
 
     private int score;
     public int Score {
@@ -30,7 +33,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
         }
         set {
             score = value;
-            scoreText.text = "Gold : " + score;
+            scoreText.text = ": " + score;
         }
     }
     void Awake()
@@ -53,6 +56,8 @@ public class GameManager : SingletonBehaviour<GameManager> {
     }
     void Update()
     {
+        playTime += Time.deltaTime;
+        UIManager.instance.updatePlayTime(playTime);
         if (isPause)
         {
             Time.timeScale = 0;
@@ -72,6 +77,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
         player.RangeLevel = 0;
         player.SpeedLevel = 0;
         retryButton.gameObject.SetActive(false);
+        playTime = 0f;
     }
 
     public void GameOver() {

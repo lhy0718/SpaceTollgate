@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         set {
             shieldLevel = value;
             maxHp += 1;
+            Hp += 1;
         }
     }
 
