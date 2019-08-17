@@ -13,6 +13,14 @@ public class GameManager : SingletonBehaviour<GameManager> {
     public PlayerController player;
     public Slider hpBar;
     public bool isPause = false;
+
+    public int[] ShieldCost= {20,30};
+    //public int[] ShieldValue= {20,30};
+    public int[] RangeCost= {20,30};
+    //public int[] RangeValue= {20,30};
+    public int[] SpeedCost= {20,30};
+    //public int[] SpeedValue= {20,30};
+
     private int score;
     public int Score {
         get {
@@ -55,7 +63,8 @@ public class GameManager : SingletonBehaviour<GameManager> {
 
     private void GameInit() {
         text.gameObject.SetActive(false);
-        Score = 0;
+        //for Test
+        Score = 1000;
         player.Hp = player.maxHp = 100;
         retryButton.gameObject.SetActive(false);
     }
@@ -75,4 +84,11 @@ public class GameManager : SingletonBehaviour<GameManager> {
     {
         isPause = false;
     }
+
+    public void UpgradePlayerLevel()
+    {
+        Debug.Log("Upgrade Player Level");
+        //player level에 프로퍼티를 달아서 능력치를 조정하자. 
+    }
+
 }

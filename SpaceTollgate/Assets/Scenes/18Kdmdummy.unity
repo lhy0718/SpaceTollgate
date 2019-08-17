@@ -153,10 +153,13 @@ MonoBehaviour:
   upgradePanel: {fileID: 376979639}
   ShieldCostText: {fileID: 1459876869}
   ShieldValueText: {fileID: 446113834}
+  ShieldUpgradeButton: {fileID: 1799800129}
   RangeCostText: {fileID: 1226584151}
   RangeValueText: {fileID: 1086338191}
+  RangeUpgradeButton: {fileID: 2105173666}
   SpeedCostText: {fileID: 1666778267}
   SpeedValueText: {fileID: 528838452}
+  SpeedUpgradeButton: {fileID: 1164496121}
 --- !u!4 &607495
 Transform:
   m_ObjectHideFlags: 0
@@ -594,7 +597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &376979640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,6 +708,9 @@ MonoBehaviour:
   player: {fileID: 1649452357}
   hpBar: {fileID: 1279043788}
   isPause: 0
+  ShieldCost: 0a000000140000003c000000960000002c01000058020000
+  RangeCost: 1400000028000000500000001e00000058020000
+  SpeedCost: 0a000000140000002800000050000000960000002c01000058020000
 --- !u!4 &430683979
 Transform:
   m_ObjectHideFlags: 0
@@ -2404,7 +2410,7 @@ GameObject:
   - component: {fileID: 1164496122}
   - component: {fileID: 1164496121}
   m_Layer: 5
-  m_Name: RangeUpgradeButton (2)
+  m_Name: SpeedUpgradeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2473,12 +2479,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 607493}
-        m_MethodName: 
+      - m_Target: {fileID: 607494}
+        m_MethodName: SpeedUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3653,12 +3659,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 607493}
-        m_MethodName: 
+      - m_Target: {fileID: 607494}
+        m_MethodName: ShieldUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4401,12 +4407,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 607493}
-        m_MethodName: 
+      - m_Target: {fileID: 607494}
+        m_MethodName: RangeUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
