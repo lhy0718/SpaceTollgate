@@ -503,6 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f5eeff691824414a804bce14b64fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frontBurst: {fileID: 0}
+  backBurst: {fileID: 0}
 --- !u!1 &326610899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,11 +1187,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b513a4dfc7144405cb933c9bf3ad52da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
   text: {fileID: 1683847951}
   scoreText: {fileID: 112245883}
   retryButton: {fileID: 476534628}
   player: {fileID: 924799899}
   hpBar: {fileID: 1980652795}
+  isPause: 0
+  ShieldCost: 140000001e000000
+  RangeCost: 140000001e000000
+  SpeedCost: 140000001e000000
 --- !u!4 &849813329
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,7 +1262,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 174
+  field of view: 155
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1474,6 +1481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f5eeff691824414a804bce14b64fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frontBurst: {fileID: 0}
+  backBurst: {fileID: 0}
 --- !u!1 &1553785570
 GameObject:
   m_ObjectHideFlags: 0
