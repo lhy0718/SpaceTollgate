@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class StayMonster : Monster
 {
+    public override void BeforeDestroy()
+    {
+        return;
+    }
+
     private void Awake()
     {
         monsterType = MonsterType.Stay;
