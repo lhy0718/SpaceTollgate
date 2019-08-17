@@ -18,6 +18,8 @@ public class UIManager : SingletonBehaviour<UIManager>
     public Text SpeedValueText;
     public Button SpeedUpgradeButton;
 
+    public Text playTimer;
+
     private GameManager gm;
     // Start is called before the first frame update
     void Awake()
@@ -110,7 +112,7 @@ public class UIManager : SingletonBehaviour<UIManager>
         if (gm.player.RangeLevel < 5)
         {
             RangeCostText.text = ": -" + gm.RangeCost[gm.player.RangeLevel];
-            RangeValueText.text = ": +1";
+            RangeValueText.text = ": +1.5";
             if (gm.RangeCost[gm.player.RangeLevel] > gm.Score)
             {
                 RangeUpgradeButton.interactable = false;
@@ -125,7 +127,7 @@ public class UIManager : SingletonBehaviour<UIManager>
         if (gm.player.SpeedLevel < 7)
         {
             SpeedCostText.text = ": -" + gm.SpeedCost[gm.player.SpeedLevel];
-            SpeedValueText.text = ": +1";
+            SpeedValueText.text = ": +2";
             if (gm.SpeedCost[gm.player.SpeedLevel] > gm.Score)
             {
                 SpeedUpgradeButton.interactable = false;
@@ -141,6 +143,15 @@ public class UIManager : SingletonBehaviour<UIManager>
         
         
         
+    }
+    #endregion
+
+    #region Play Time
+    public void updatePlayTime(float playtime)
+    {
+        string minutes = ((int)playtime / 60).ToString("00");
+        string seconds = (playtime % 60).ToString("00");
+        playTimer.text = minutes + ":" + seconds;
     }
     #endregion
 
