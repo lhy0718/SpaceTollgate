@@ -702,10 +702,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b513a4dfc7144405cb933c9bf3ad52da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  camera: {fileID: 551998807}
   text: {fileID: 551181502}
   scoreText: {fileID: 1263797880}
   retryButton: {fileID: 19144745}
+  startButton: {fileID: 0}
   player: {fileID: 1649452357}
   hpBar: {fileID: 1279043788}
   isPause: 0
@@ -3295,6 +3296,9 @@ MonoBehaviour:
   hpBar: {fileID: 1279043788}
   maxHp: 100
   range: 0
+  shieldLevel: 0
+  rangeLevel: 0
+  speedLevel: 0
 --- !u!50 &1649452358
 Rigidbody2D:
   serializedVersion: 4

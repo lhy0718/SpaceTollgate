@@ -1191,6 +1191,7 @@ MonoBehaviour:
   text: {fileID: 1683847951}
   scoreText: {fileID: 112245883}
   retryButton: {fileID: 476534628}
+  startButton: {fileID: 0}
   player: {fileID: 924799899}
   hpBar: {fileID: 1980652795}
   isPause: 0
@@ -1348,12 +1349,16 @@ MonoBehaviour:
   speed: 10
   rotateSpeed: 10
   boostSpeed: 2
-  rWing: {fileID: 0}
+  rWing: {fileID: 284869345}
   lWing: {fileID: 0}
   gate: {fileID: 0}
   rigidbody: {fileID: 0}
   hpBar: {fileID: 0}
   maxHp: 0
+  range: 0
+  shieldLevel: 0
+  rangeLevel: 0
+  speedLevel: 0
 --- !u!4 &924799901
 Transform:
   m_ObjectHideFlags: 0
