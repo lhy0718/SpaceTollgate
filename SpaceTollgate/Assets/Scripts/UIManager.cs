@@ -74,21 +74,21 @@ public class UIManager : SingletonBehaviour<UIManager>
     public void ShieldUpgrade()
     {
         gm.Score -= gm.ShieldCost[gm.player.ShieldLevel];
-        gm.UpgradePlayerLevel(0);
+       // gm.UpgradePlayerLevel(0);
         UpdateInfo();
     }
 
     public void RangeUpgrade()
     {
         gm.Score -= gm.RangeCost[gm.player.RangeLevel];
-        gm.UpgradePlayerLevel(1);
+       // gm.UpgradePlayerLevel(1);
         UpdateInfo();
     }
 
     public void SpeedUpgrade()
     {
         gm.Score -= gm.SpeedCost[gm.player.SpeedLevel];
-        gm.UpgradePlayerLevel(2);
+      //  gm.UpgradePlayerLevel(2);
         UpdateInfo();
     }
 
