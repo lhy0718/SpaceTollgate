@@ -10,9 +10,9 @@ public class StraightMonster : Monster
     }
 
     [Header("Move Setting")]
-    public Vector2 direction;
-    public float speed;
-    public float switchTime;
+    public Vector2 direction = new Vector2(0, 1);
+    public float speed = 1;
+    public float switchTime = 1;
 
     Coroutine moving;
 
