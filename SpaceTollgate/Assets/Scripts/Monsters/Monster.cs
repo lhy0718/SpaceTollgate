@@ -6,7 +6,7 @@ public enum MonsterType
 {
     Stay,
     Straight,
-    Sinosoid,
+    Sinusoid,
     Rotation,
     Revolution,
     Pirate
