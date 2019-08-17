@@ -33,7 +33,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
         }
         set {
             score = value;
-            scoreText.text = ": " + score;
+            scoreText.text = "Gold : " + score;
         }
     }
     void Awake()

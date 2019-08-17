@@ -24,13 +24,11 @@ public class UIManager : SingletonBehaviour<UIManager>
     // Start is called before the first frame update
     void Awake()
     {
-        if (instance != this)
-        {
+        if (instance != this) {
             Destroy(gameObject);
             return;
         }
-        else
-            SetStatic();
+        SetStatic();
 
         gm = GameManager.instance;
         //text.SetActive(true);

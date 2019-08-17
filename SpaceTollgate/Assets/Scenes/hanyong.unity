@@ -719,21 +719,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 134.24501
       objectReference: {fileID: 0}
-    - target: {fileID: 2341113518303773556, guid: 94240f4c7f8c23d4ab9d7e9a2c705dd4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2341113518303773556, guid: 94240f4c7f8c23d4ab9d7e9a2c705dd4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2341113518303773556, guid: 94240f4c7f8c23d4ab9d7e9a2c705dd4,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94240f4c7f8c23d4ab9d7e9a2c705dd4, type: 3}
 --- !u!1 &408206289
@@ -13275,10 +13260,10 @@ MonoBehaviour:
   text: {fileID: 1023898794}
   scoreText: {fileID: 999500771}
   retryButton: {fileID: 1790519442}
-  startButton: {fileID: 0}
   player: {fileID: 924799899}
   hpBar: {fileID: 1474372213}
   isPause: 0
+  playTime: 0
   ShieldCost: 0a000000140000003c000000960000002c01000058020000
   RangeCost: 1400000028000000500000002c01000058020000
   SpeedCost: 0a000000140000002800000050000000960000002c01000058020000
@@ -23480,6 +23465,7 @@ MonoBehaviour:
   SpeedCostText: {fileID: 1387355067}
   SpeedValueText: {fileID: 1240537605}
   SpeedUpgradeButton: {fileID: 1778590657}
+  playTimer: {fileID: 0}
 --- !u!4 &2113485455
 Transform:
   m_ObjectHideFlags: 0
@@ -23634,21 +23620,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 132.207
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054473847186404364, guid: a2a5e762a78cedc44868aee6bbd48729,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054473847186404364, guid: a2a5e762a78cedc44868aee6bbd48729,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054473847186404364, guid: a2a5e762a78cedc44868aee6bbd48729,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a5e762a78cedc44868aee6bbd48729, type: 3}
