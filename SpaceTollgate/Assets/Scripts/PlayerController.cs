@@ -38,7 +38,10 @@ public class PlayerController : MonoBehaviour
         set
         {
             rangeLevel = value;
-            range += 2.5f;
+            range = (2.5f + rangeLevel * 1.5f) / 2.5f;
+            rWing.transform.position = transform.TransformPoint(new Vector3(range * 1.5f, 0));
+            lWing.transform.position = transform.TransformPoint(new Vector3(-range * 1.5f, 0));
+            gate.transform.localScale = new Vector3(range * 1.35f, 0.4f);
         }
     }
 
