@@ -96,7 +96,7 @@ public class UIManager : SingletonBehaviour<UIManager>
         {
             ShieldCostText.text = ": -" + gm.ShieldCost[gm.player.ShieldLevel];
             ShieldValueText.text = ": +1";
-            if (gm.ShieldCost[gm.player.ShieldLevel + 1] > gm.Score)
+            if (gm.ShieldCost[gm.player.ShieldLevel] > gm.Score)
             {
                 ShieldUpgradeButton.interactable = false;
             }
@@ -111,7 +111,7 @@ public class UIManager : SingletonBehaviour<UIManager>
         {
             RangeCostText.text = ": -" + gm.RangeCost[gm.player.RangeLevel];
             RangeValueText.text = ": +1";
-            if (gm.RangeCost[gm.player.RangeLevel + 1] > gm.Score)
+            if (gm.RangeCost[gm.player.RangeLevel] > gm.Score)
             {
                 RangeUpgradeButton.interactable = false;
             }
@@ -126,7 +126,7 @@ public class UIManager : SingletonBehaviour<UIManager>
         {
             SpeedCostText.text = ": -" + gm.SpeedCost[gm.player.SpeedLevel];
             SpeedValueText.text = ": +1";
-            if (gm.SpeedCost[gm.player.SpeedLevel + 1] > gm.Score)
+            if (gm.SpeedCost[gm.player.SpeedLevel] > gm.Score)
             {
                 SpeedUpgradeButton.interactable = false;
             }
