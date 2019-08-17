@@ -26,13 +26,13 @@ public class EnemyFinder : MonoBehaviour
     private void FindEnemy() {
         Vector3 c = GameManager.instance.camera.transform.position;
         for (int i = 0; i < enemyList.Length; i++) {
-            if (enemyRenderList[i].isVisible) {
+            if (enemyList[i] == null || enemyRenderList[i].isVisible) {
                 arrows[i].SetActive(false);
             } else {
                 Vector3 direction = new Vector3(enemyList[i].transform.position.x - c.x, enemyList[i].transform.position.y - c.y);
                 arrows[i].SetActive(true);
-                arrows[i].transform.position = new Vector3(c.x, c.y)+Vector3.Normalize(direction)*3;
-                arrows[i].transform.rotation = Quaternion.AngleAxis( Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg-90, Vector3.forward);
+                arrows[i].transform.position = new Vector3(c.x, c.y) + Vector3.Normalize(direction) * 3;
+                arrows[i].transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90, Vector3.forward);
             }
         }
     }
