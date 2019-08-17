@@ -11,6 +11,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
     public Text text;
     public Text scoreText;
     public Button retryButton;
+    public Button startButton;
     public PlayerController player;
     public Slider hpBar;
     public bool isPause = false;
@@ -91,5 +92,5 @@ public class GameManager : SingletonBehaviour<GameManager> {
         Debug.Log("Upgrade Player Level");
         //player level에 프로퍼티를 달아서 능력치를 조정하자. 
     }
-
+    
 }
