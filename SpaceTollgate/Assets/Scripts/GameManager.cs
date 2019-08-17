@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
+    public new Camera camera;
     public Text text;
     public Text scoreText;
     public Button retryButton;
