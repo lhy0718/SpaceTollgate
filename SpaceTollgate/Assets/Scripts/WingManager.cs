@@ -5,6 +5,8 @@ using UnityEngine;
 public class WingManager : MonoBehaviour
 {
     private PlayerController player;
+    public GameObject frontBurst;
+    public GameObject backBurst;
 
     void Awake() {
 

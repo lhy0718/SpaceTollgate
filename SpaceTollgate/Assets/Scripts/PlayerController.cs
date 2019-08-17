@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public Slider hpBar;
     public int Size { get; set; }
     public int maxHp;
+
+    private WingManager rWingM, lWingM;
     private int hp;
     public int Hp {
         get {
@@ -29,12 +31,94 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        lWingM = lWing.GetComponent<WingManager>();
+        rWingM = rWing.GetComponent<WingManager>();
+    }
+
     void Update() {
+        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = Input.GetAxis("Horizontal");
+
         if (Input.GetKey(KeyCode.LeftShift)) {
-            rigidbody.AddForce(transform.TransformVector(new Vector2(0, Input.GetAxisRaw("Vertical") * boostSpeed)));
+            rigidbody.AddForce(transform.TransformVector(new Vector2(0, vertical * boostSpeed)));
         } else {
-            rigidbody.AddForce(transform.TransformVector(new Vector2(0, Input.GetAxisRaw("Vertical") * speed)));
+            rigidbody.AddForce(transform.TransformVector(new Vector2(0, vertical * speed)));
         }
-        rigidbody.AddTorque(-Input.GetAxis("Horizontal") * rotateSpeed);
+        rigidbody.AddTorque(-horizontal * rotateSpeed);
+
+        if (vertical > 0)
+        {
+            if (horizontal < 0)
+            {
+                rWingM.frontBurst.SetActive(true);
+                rWingM.backBurst.SetActive(true);
+                lWingM.frontBurst.SetActive(true);
+                lWingM.backBurst.SetActive(false);
+            }
+            else if (horizontal > 0)
+            {
+                rWingM.frontBurst.SetActive(true);
+                rWingM.backBurst.SetActive(false);
+                lWingM.frontBurst.SetActive(true);
+                lWingM.backBurst.SetActive(true);
+            }
+            else
+            {
+                rWingM.frontBurst.SetActive(true);
+                rWingM.backBurst.SetActive(false);
+                lWingM.frontBurst.SetActive(true);
+                lWingM.backBurst.SetActive(false);
+            }
+        }
+        else if (vertical < 0)
+        {
+            if (horizontal < 0)
+            {
+                rWingM.frontBurst.SetActive(true);
+                rWingM.backBurst.SetActive(true);
+                lWingM.frontBurst.SetActive(false);
+                lWingM.backBurst.SetActive(true);
+            }
+            else if (horizontal > 0)
+            {
+                rWingM.frontBurst.SetActive(false);
+                rWingM.backBurst.SetActive(true);
+                lWingM.frontBurst.SetActive(true);
+                lWingM.backBurst.SetActive(true);
+            }
+            else
+            {
+                rWingM.frontBurst.SetActive(false);
+                rWingM.backBurst.SetActive(true);
+                lWingM.frontBurst.SetActive(false);
+                lWingM.backBurst.SetActive(true);
+            }
+        }
+        else
+        {
+            if (horizontal < 0)
+            {
+                rWingM.frontBurst.SetActive(true);
+                rWingM.backBurst.SetActive(false);
+                lWingM.frontBurst.SetActive(false);
+                lWingM.backBurst.SetActive(true);
+            }
+            else if (horizontal > 0)
+            {
+                rWingM.frontBurst.SetActive(false);
+                rWingM.backBurst.SetActive(true);
+                lWingM.frontBurst.SetActive(true);
+                lWingM.backBurst.SetActive(false);
+            }
+            else
+            {
+                rWingM.frontBurst.SetActive(false);
+                rWingM.backBurst.SetActive(false);
+                lWingM.frontBurst.SetActive(false);
+                lWingM.backBurst.SetActive(false);
+            }
+        }
     }
 }
