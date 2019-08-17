@@ -64,6 +64,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
     }
 
     private void GameInit() {
+        camera.orthographicSize = 5;
         text.gameObject.SetActive(false);
         //for Test
         Score = 2000;

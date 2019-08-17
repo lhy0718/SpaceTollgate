@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
             rWing.transform.position = transform.TransformPoint(new Vector3(range * 1.5f, 0));
             lWing.transform.position = transform.TransformPoint(new Vector3(-range * 1.5f, 0));
             gate.transform.localScale = new Vector3(range * 1.35f, 0.4f);
+            GameManager.instance.camera.orthographicSize = range * 5;
         }
     }
 
