@@ -16,7 +16,11 @@ public class GameManager : SingletonBehaviour<GameManager> {
     public Slider hpBar;
     public bool isPause = false;
 
+    public bool isTimeStage;
     public float playTime;
+    public float limitPlayTime;
+    public int[] monsterCnt;
+    public int[] monsterQuest;
 
     public int[] ShieldCost= {20,30};
     //public int[] ShieldValue= {20,30};
@@ -66,6 +70,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
         {
             Time.timeScale = 1;
         }
+        CheckWinCondition();
     }
 
     private void GameInit() {
@@ -76,6 +81,11 @@ public class GameManager : SingletonBehaviour<GameManager> {
         player.Hp = player.maxHp = 100;
         retryButton.gameObject.SetActive(false);
         playTime = 0f;
+
+        for(int i = 0; i < monsterCnt.Length; i++)
+        {
+            monsterCnt[i] = 0;
+        }
     }
 
     public void GameOver() {
@@ -94,10 +104,39 @@ public class GameManager : SingletonBehaviour<GameManager> {
         isPause = false;
     }
 
+    public void GameClear()
+    {
+        GamePause();
+        UIManager.instance.OpenClearPanel();
+        Debug.Log("gameClear!");
+    }
+
+    /*
     public void UpgradePlayerLevel()
     {
         Debug.Log("Upgrade Player Level");
         //player level에 프로퍼티를 달아서 능력치를 조정하자. 
     }
-    
+    */
+
+    public void CheckWinCondition()
+    {
+        if (isTimeStage)
+        {
+            if (limitPlayTime <= playTime)
+            {
+                GameClear();
+            }
+        }
+        else
+        {
+            bool isClear = true;
+            for(int i = 0; i < monsterCnt.Length; i++)
+            {
+                isClear=isClear && monsterCnt[i] >= monsterQuest[i];
+            }
+            if (isClear)
+                GameClear();
+        }
+    }
 }
