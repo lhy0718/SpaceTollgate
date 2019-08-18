@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : SingletonBehaviour<UIManager>
 {
     public GameObject pausePanel;
+    public GameObject clearPanel;
 
     public GameObject upgradePanel;
     public Text ShieldCostText;
@@ -24,13 +25,11 @@ public class UIManager : SingletonBehaviour<UIManager>
     // Start is called before the first frame update
     void Awake()
     {
-        if (instance != this)
-        {
+        if (instance != this) {
             Destroy(gameObject);
             return;
         }
-        else
-            SetStatic();
+        SetStatic();
 
         gm = GameManager.instance;
         //text.SetActive(true);
@@ -58,6 +57,16 @@ public class UIManager : SingletonBehaviour<UIManager>
     }
     #endregion
 
+    #region Game Clear
+    public void OpenClearPanel()
+    {
+        clearPanel.SetActive(true);
+    }
+    public void ToStageSelectScene()
+    {
+        Debug.Log("To stage Select");
+    }
+    #endregion
     #region Upgrade
     public void OpenUpgradePanel()
     {
@@ -74,21 +83,21 @@ public class UIManager : SingletonBehaviour<UIManager>
     public void ShieldUpgrade()
     {
         gm.Score -= gm.ShieldCost[gm.player.ShieldLevel];
-       // gm.UpgradePlayerLevel(0);
+        gm.player.ShieldLevel++;
         UpdateInfo();
     }
 
     public void RangeUpgrade()
     {
         gm.Score -= gm.RangeCost[gm.player.RangeLevel];
-       // gm.UpgradePlayerLevel(1);
+        gm.player.RangeLevel++;
         UpdateInfo();
     }
 
     public void SpeedUpgrade()
     {
         gm.Score -= gm.SpeedCost[gm.player.SpeedLevel];
-      //  gm.UpgradePlayerLevel(2);
+        gm.player.SpeedLevel++;
         UpdateInfo();
     }
 

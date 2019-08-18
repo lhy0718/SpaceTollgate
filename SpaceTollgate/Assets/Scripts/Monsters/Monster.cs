@@ -35,6 +35,7 @@ public abstract class Monster : MonoBehaviour
         if (complete)
         {
             GameManager.instance.Score += point;
+            GameManager.instance.monsterCnt[(int)monsterType]++;
             BeforeDestroy();
             Destroy(gameObject);
         }
