@@ -55,7 +55,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
     void Start() {
         GameInit();
         retryButton.onClick.AddListener(delegate {
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         });
     }
     void Update()
@@ -76,8 +76,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
     private void GameInit() {
         camera.orthographicSize = 5;
         text.gameObject.SetActive(false);
-        //for Test
-        Score = 1000;
+        Score = 10;
         player.Hp = player.maxHp = 100;
         retryButton.gameObject.SetActive(false);
         playTime = 0f;

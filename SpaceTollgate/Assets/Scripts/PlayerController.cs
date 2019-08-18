@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
         }
         set {
             shieldLevel = value;
-            maxHp += 1;
-            Hp += 1;
+            maxHp += 10;
+            Hp = Mathf.Max(maxHp * 3 / 4, Hp + 10);
         }
     }
 
