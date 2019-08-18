@@ -95,10 +95,9 @@ GameObject:
   - component: {fileID: 4119725623145765306}
   - component: {fileID: 4119725623145765307}
   - component: {fileID: 4119725623145765304}
-  - component: {fileID: 4119725623145765305}
   m_Layer: 0
   m_Name: T_1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,25 +193,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.81, y: 2.85}
   m_EdgeRadius: 0
---- !u!114 &4119725623145765305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4119725623145765308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36ba38d80612491438d665dd1c9d1d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterType: 0
-  point: 0
-  isTriggersEnter: 
-  nextIdx: 0
-  direction: {x: 0, y: 1}
-  speed: 1
-  switchTime: 1
 --- !u!1 &4119725623184486939
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4119725623589796223}
+  - component: {fileID: 1364073743}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -329,6 +310,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1364073743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4119725623589796192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ef354aa11c33641bb3dffda5f82be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterType: 0
+  point: 0
+  isTriggersEnter: 
+  nextIdx: 0
+  moveTime: 5
+  mag: 3
 --- !u!1 &4119725623787494411
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,10 +507,9 @@ GameObject:
   - component: {fileID: 4119725624019122867}
   - component: {fileID: 4119725624019122868}
   - component: {fileID: 4119725624019122865}
-  - component: {fileID: 4119725624019122866}
   m_Layer: 0
   m_Name: T_2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -607,25 +605,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.81, y: 2.05}
   m_EdgeRadius: 0
---- !u!114 &4119725624019122866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4119725624019122869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36ba38d80612491438d665dd1c9d1d17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterType: 0
-  point: 0
-  isTriggersEnter: 
-  nextIdx: 0
-  direction: {x: 0, y: 1}
-  speed: 1
-  switchTime: 1
 --- !u!1 &4119725624871541093
 GameObject:
   m_ObjectHideFlags: 0

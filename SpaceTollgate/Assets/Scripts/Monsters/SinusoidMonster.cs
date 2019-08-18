@@ -10,6 +10,7 @@ public class SinusoidMonster : Monster
     }
 
     public float moveTime = 3;
+    public float mag = 1;
 
     private Coroutine sinMove;
 
@@ -32,13 +33,13 @@ public class SinusoidMonster : Monster
         {
             while (time + moveTime > Time.time)
             {
-                transform.position = new Vector2(transform.position.x + Time.deltaTime * direction * 3, transform.position.y + (0.4f * Mathf.Sin(coordinate + 0.05f) - 0.4f * Mathf.Sin(coordinate)) / 2);
+                transform.position = new Vector2(transform.position.x + Time.deltaTime * direction * 3, transform.position.y + mag * (0.4f * Mathf.Sin(coordinate + 0.05f) - 0.4f * Mathf.Sin(coordinate)) / 2);
                 coordinate += Time.deltaTime;
                 yield return null;
             }
             time = Time.time;
             direction *= -1;
-            GetComponent<SpriteRenderer>().flipY = direction != 1;
+            transform.Rotate(new Vector3(0,0,180));
         }
     }
 }
