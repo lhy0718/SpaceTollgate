@@ -6,6 +6,7 @@ public class PirateMonster : Monster
 {
     public override void BeforeDestroy()
     {
+        GameManager.instance.deletedMonster = monsterName;
         StopCoroutine(followWing);
     }
 

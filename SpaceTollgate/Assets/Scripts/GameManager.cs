@@ -21,6 +21,8 @@ public class GameManager : SingletonBehaviour<GameManager> {
     public float limitPlayTime;
     public int[] monsterCnt;
     public int[] monsterQuest;
+    public MonsterName deletedMonster = MonsterName.Empty;
+    public MonsterName targetMonster = MonsterName.notDefined;
 
     public int[] ShieldCost= {20,30};
     //public int[] ShieldValue= {20,30};
@@ -55,7 +57,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
     void Start() {
         GameInit();
         retryButton.onClick.AddListener(delegate {
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("StageSelection");
         });
     }
     void Update()
@@ -77,8 +79,9 @@ public class GameManager : SingletonBehaviour<GameManager> {
         camera.orthographicSize = 5;
         text.gameObject.SetActive(false);
         //for Test
-        Score = 0;
+        Score = 1000;
         player.Hp = player.maxHp = 100;
+        retryButton.onClick.RemoveAllListeners();
         retryButton.gameObject.SetActive(false);
         playTime = 0f;
 
@@ -135,7 +138,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
             {
                 isClear=isClear && monsterCnt[i] >= monsterQuest[i];
             }
-            if (isClear)
+            if (isClear || deletedMonster == targetMonster)
                 GameClear();
         }
     }

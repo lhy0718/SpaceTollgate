@@ -16,8 +16,11 @@ public enum MonsterName
 {
     Astronaut,
     SpaceShip,
-    Pirate,
-    Train
+    Pirate_small,
+    Train,
+    pirate_medium,
+    Empty,
+    notDefined,
 
 }
 
