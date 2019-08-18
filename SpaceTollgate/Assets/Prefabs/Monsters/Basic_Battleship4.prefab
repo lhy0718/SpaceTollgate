@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterType: 0
-  point: 0
+  point: 15
   isTriggersEnter: 
   nextIdx: 0
   isClockwise: 1
