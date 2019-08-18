@@ -9,6 +9,6 @@ public class IfSelectOff : MonoBehaviour
     public Image ConUI;
     public void TurnOff()
     {
-        ConUI.gameObject.SetActive(false);
+        transform.Find("IfSelect").gameObject.SetActive(false);
     }
 }
