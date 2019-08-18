@@ -127,7 +127,14 @@ public class GameManager : SingletonBehaviour<GameManager> {
             {
                 GameClear();
             }
-        }
+            bool isClear = true;
+            for (int i = 0; i < monsterCnt.Length; i++)
+            {
+                isClear = isClear && monsterCnt[i] >= monsterQuest[i];
+            }
+            if (isClear)
+                GameClear();
+    }
         else
         {
             bool isClear = true;

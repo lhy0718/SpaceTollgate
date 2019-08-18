@@ -5,6 +5,7 @@ using UnityEngine;
 public class RevolutionMonster : Monster
 {
     public bool isClockwise = true;
+    public float angle = 0;
     public float speed = 1;
     public float radius = 3;
 
@@ -24,6 +25,7 @@ public class RevolutionMonster : Monster
     {
         axisPoint = transform.position;
         transform.position = axisPoint + new Vector2(0, radius);
+        transform.RotateAround(axisPoint, new Vector3(0,0,1), angle);
     }
 
     private void Update()
