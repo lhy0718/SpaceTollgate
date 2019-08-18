@@ -11,6 +11,7 @@ public class SelectScene : MonoBehaviour
 
     public void OpenScene()
     {
+        MainSound.inst.GetComponent<AudioSource>().Stop();
         SceneManager.LoadScene(sceneNum);
     }
 }

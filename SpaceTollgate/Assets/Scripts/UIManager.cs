@@ -65,6 +65,7 @@ public class UIManager : SingletonBehaviour<UIManager>
     public void ToStageSelectScene()
     {
         Debug.Log("To stage Select");
+        MainSound.inst.GetComponent<AudioSource>().Play();
     }
     #endregion
     #region Upgrade
