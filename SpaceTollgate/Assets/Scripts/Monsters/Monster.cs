@@ -12,9 +12,19 @@ public enum MonsterType
     Pirate
 }
 
+public enum MonsterName
+{
+    Astronaut,
+    SpaceShip,
+    Pirate,
+    Train
+
+}
+
 public abstract class Monster : MonoBehaviour
 {
     public MonsterType monsterType;
+    public MonsterName monsterName;
     public int point;
 
     public List<int> isTriggersEnter = new List<int>();
@@ -35,7 +45,7 @@ public abstract class Monster : MonoBehaviour
         if (complete)
         {
             GameManager.instance.Score += point;
-            GameManager.instance.monsterCnt[(int)monsterType]++;
+            GameManager.instance.monsterCnt[(int)monsterName]++;
             BeforeDestroy();
             Destroy(gameObject);
         }
