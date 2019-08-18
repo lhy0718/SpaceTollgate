@@ -77,7 +77,7 @@ public class GameManager : SingletonBehaviour<GameManager> {
         camera.orthographicSize = 5;
         text.gameObject.SetActive(false);
         //for Test
-        Score = 1000;
+        Score = 0;
         player.Hp = player.maxHp = 100;
         retryButton.gameObject.SetActive(false);
         playTime = 0f;
