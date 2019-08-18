@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterType: 0
+  monsterName: 2
   point: 40
   isTriggersEnter: 
   nextIdx: 0
