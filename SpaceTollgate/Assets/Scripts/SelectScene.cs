@@ -5,15 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class SelectScene : MonoBehaviour
 {
+    public int sceneNum = 0;
+    public string title = "";
+    public string description = "";
 
-    public Image ConUI;
-    public Text[] TobeWritten = new Text[2];
-    public Text[] ToWrite = new Text[1];
-
-    public void ConfirmUI()
+    public void OpenScene()
     {
-        ConUI.gameObject.SetActive(true);
-        ConUI.transform.Find("StageName").gameObject.GetComponent<Text>().text = transform.Find("Text").gameObject.GetComponent<Text>().text;
-        ConUI.transform.Find("Script").gameObject.GetComponent<Text>().text = transform.Find("Script").gameObject.GetComponent<Text>().text;
+        SceneManager.LoadScene(sceneNum);
     }
 }

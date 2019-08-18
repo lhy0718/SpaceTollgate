@@ -206,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 1876658321859790806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.145593, y: -1.6258718, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1876658320488894143}
   - {fileID: 1876658320747161600}
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterType: 0
-  point: 0
+  point: 15
   isTriggersEnter: 
   nextIdx: 0
   isClockwise: 1
