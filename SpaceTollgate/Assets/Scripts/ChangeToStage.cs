@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class ChangeToStage : MonoBehaviour
 {
+    public int stageNum = 0;
+
     public void ToStage()
     {
-
-
+        MainSound.inst.GetComponent<AudioSource>().Stop();
+        SceneManager.LoadScene(stageNum);
     }
-
-
 }
