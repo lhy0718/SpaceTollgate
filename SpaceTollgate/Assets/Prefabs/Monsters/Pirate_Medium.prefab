@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4386599965911514779}
   - component: {fileID: 4386599965911514780}
-  - component: {fileID: 4386599965911514777}
   - component: {fileID: 4386599965911514778}
   - component: {fileID: 4386599965911514775}
   - component: {fileID: 4386599965911514776}
+  - component: {fileID: 5090389700712851047}
   m_Layer: 0
   m_Name: Pirate_Medium
   m_TagString: Enemy
@@ -86,25 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4386599965911514777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4386599965911514781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5590f3f3eb134018b7c9ac705912866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterType: 0
-  point: 150
-  isTriggersEnter: 
-  nextIdx: 0
-  direction: {x: 0, y: 1}
-  speed: 1
-  switchTime: 1
 --- !u!70 &4386599965911514778
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -173,6 +154,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.12, y: 0.21}
   m_EdgeRadius: 0
+--- !u!114 &5090389700712851047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4386599965911514781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa30710f3e97df44b1a82613d64e6a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterType: 0
+  point: 0
+  isTriggersEnter: 
+  nextIdx: 0
+  speed: 1
+  detectRadius: 5
 --- !u!1 &4386599966661318853
 GameObject:
   m_ObjectHideFlags: 0

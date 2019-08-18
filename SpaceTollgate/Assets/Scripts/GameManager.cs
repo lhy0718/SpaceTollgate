@@ -106,8 +106,8 @@ public class GameManager : SingletonBehaviour<GameManager> {
 
     public void GameClear()
     {
-        GamePause();
-        UIManager.instance.OpenClearPanel();
+        //GamePause();
+        //UIManager.instance.OpenClearPanel();
         Debug.Log("gameClear!");
     }
 
