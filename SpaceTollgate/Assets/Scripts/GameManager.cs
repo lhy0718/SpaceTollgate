@@ -57,7 +57,11 @@ public class GameManager : SingletonBehaviour<GameManager> {
     void Start() {
         GameInit();
         retryButton.onClick.AddListener(delegate {
+<<<<<<< HEAD
             SceneManager.LoadScene("StageSelection");
+=======
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+>>>>>>> 91b8b5e8ec765389cdad6c9b43b2fa6d987d161b
         });
     }
     void Update()
@@ -78,8 +82,12 @@ public class GameManager : SingletonBehaviour<GameManager> {
     private void GameInit() {
         camera.orthographicSize = 5;
         text.gameObject.SetActive(false);
+<<<<<<< HEAD
         //for Test
         Score = 1000;
+=======
+        Score = 10;
+>>>>>>> 91b8b5e8ec765389cdad6c9b43b2fa6d987d161b
         player.Hp = player.maxHp = 100;
         retryButton.onClick.RemoveAllListeners();
         retryButton.gameObject.SetActive(false);
@@ -130,7 +138,14 @@ public class GameManager : SingletonBehaviour<GameManager> {
             {
                 GameClear();
             }
-        }
+            bool isClear = true;
+            for (int i = 0; i < monsterCnt.Length; i++)
+            {
+                isClear = isClear && monsterCnt[i] >= monsterQuest[i];
+            }
+            if (isClear)
+                GameClear();
+    }
         else
         {
             bool isClear = true;

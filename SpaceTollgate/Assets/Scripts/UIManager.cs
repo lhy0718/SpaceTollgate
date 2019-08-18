@@ -107,7 +107,7 @@ public class UIManager : SingletonBehaviour<UIManager>
         if (gm.player.ShieldLevel < 6)
         {
             ShieldCostText.text = ": -" + gm.ShieldCost[gm.player.ShieldLevel];
-            ShieldValueText.text = ": +1";
+            ShieldValueText.text = ": +10";
             if (gm.ShieldCost[gm.player.ShieldLevel] > gm.Score)
             {
                 ShieldUpgradeButton.interactable = false;

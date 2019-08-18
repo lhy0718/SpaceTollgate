@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 286}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 250}
+  m_SizeDelta: {x: 472.2, y: 83.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62748887
 MonoBehaviour:
@@ -179,18 +179,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 6
+    m_MaxSize: 60
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "STAGE\uC774\uB984"
 --- !u!222 &62748888
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49005a640c21c1d4d92d35f3c895216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageNum: 0
 --- !u!1 &242770144
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000011444, y: 0.000012398}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 614.3, y: 351.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242770146
@@ -403,18 +404,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\uC124\uBA85ABCD"
 --- !u!222 &242770147
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -682,9 +683,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d235f60f722913a42be3b25f7cdb3cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNum: 0
-  title: 
-  description: 
+  sceneNum: 3
+  title: "2\uC2A4\uD14C\uC774\uC9C0"
+  description: "\uBAA9\uD45C : \uC18C\uD574\uC801 \uB4E4\uC5D0\uAC8C\uC11C 1\uBD84
+    \uBC84\uD2F0\uAE30 \uB610\uB294 \uC18C\uD574\uC801 3\uB9C8\uB9AC \uC7A1\uAE30.
+    \  \n\n\uC2A4\uD14C\uC774\uC9C0 \uC124\uBA85 : \uD574\uC801\uB4E4\uC774 \uB4F1\uC7A5\uD558\uB294
+    \uB9F5 \uC785\uB2C8\uB2E4. \uD574\uC801\uB4E4\uC5D0\uAC8C\uC11C \uD53C\uD574\uC11C\uBC84\uD2F0\uC138\uC694 "
+  ifSelect: {fileID: 1459776214}
 --- !u!1 &855391895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,9 +1014,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d235f60f722913a42be3b25f7cdb3cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNum: 0
-  title: 
-  description: 
+  sceneNum: 4
+  title: "3\uC2A4\uD14C\uC774\uC9C0 "
+  description: "\uBAA9\uD45C : \uC5F4\uCC28\uC640 \uAC70\uC8FC\uC9C0\uB97C \uBA39\uAE30
+    \ \n\n\uC2A4\uD14C\uC774\uC9C0 \uC124\uBA85 : \uB3C8\uC744 \uBC8C\uC5B4\uC11C
+    \uC0AC\uC774\uC988\uAC00 \uC131\uC7A5\uC744 \uD558\uBA74 \uB354\uD070 \uBB3C\uCCB4\uB4E4\uC744
+    \uBA39\uC744 \uC218\uC788\uC2B5\uB2C8\uB2E4."
+  ifSelect: {fileID: 1459776214}
 --- !u!1 &1073682519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,11 +1080,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 4
+    m_MaxSize: 68
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1765,9 +1774,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d235f60f722913a42be3b25f7cdb3cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNum: 0
-  title: 
-  description: 
+  sceneNum: 5
+  title: "4\uC2A4\uD14C\uC774\uC9C0"
+  description: "\uBAA9\uD45C : 2\uBD84 30\uCD08\uC758 \uC81C\uD55C \uC2DC\uAC04 \uB3D9\uC548
+    \uBC84\uD2F0\uAE30 \uB610\uB294 \uD574\uC801\uC911\uD615\uC120\uC744 \uC7A1\uC544\uBA39\uAE30
+    \ \n\n\uC2A4\uD14C\uC774\uC9C0 \uC124\uBA85 : \uD574\uC801 \uC911\uD615 \uC120\uC774
+    \uB098\uC635\uB2C8\uB2E4. \uCDA9\uBD84\uD788 \uC131\uC7A5\uD558\uAE30 \uC804\uAE4C\uC9C0\uB294
+    \uB3C4\uB9DD \uB2E4\uB2C8\uC138\uC694 "
+  ifSelect: {fileID: 1459776214}
 --- !u!1 &1807257989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,9 +2404,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d235f60f722913a42be3b25f7cdb3cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNum: 0
-  title: 
-  description: 
+  sceneNum: 2
+  title: "1\uC2A4\uD14C\uC774\uC9C0"
+  description: "\uBAA9\uD45C : \uC6B0\uC8FC\uC778 2\uBA85, \uC6B0\uC8FC\uC120 4\uAC1C,
+    \uBA39\uAE30\n\n\uC2A4\uD14C\uC774\uC9C0 \uC124\uBA85: \uAE30\uBCF8\uC801\uC774\uACE0
+    \uC544\uC8FC \uC26C\uC6B4 \uB9F5\uC785\uB2C8\uB2E4. "
+  ifSelect: {fileID: 1459776214}
 --- !u!1 &2024526479
 GameObject:
   m_ObjectHideFlags: 0
